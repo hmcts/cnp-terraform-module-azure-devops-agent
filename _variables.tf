@@ -58,3 +58,8 @@ variable "key_vault_name" {
   type        = string
   description = "name given to key vault"
 }
+
+variable "route_table_name" {
+  type        = string
+  description = "name given to route table"
+}

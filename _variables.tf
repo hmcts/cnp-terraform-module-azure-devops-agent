@@ -1,11 +1,11 @@
 variable "resource_group_name" {
   type        = string
-  description = "[REQUIRED] - resource group to store resources"
+  description = "[REQUIRED] - resource group to create resources"
 }
 
 variable "location" {
   type        = string
-  description = "[REQUIRED] - location to store resources"
+  description = "[REQUIRED] - location to create resources"
 }
 
 variable "tags" {
@@ -15,17 +15,17 @@ variable "tags" {
 
 variable "vnet_name" {
   type        = string
-  description = "[REQUIRED] - location to store resources"
+  description = "[REQUIRED] - name given to the virtual network"
 }
 
 variable "vnet_address_space" {
   type        = list(string)
-  description = "[REQUIRED] - address space to be used by the virtual network"
+  description = "[REQUIRED] - address space given to the virtual network"
 }
 
 variable "dns_servers" {
   type        = list(string)
-  description = "dns servers for virtual network"
+  description = "dns servers given to the virtual network"
   default     = []
 }
 
@@ -36,7 +36,7 @@ variable "subnet_name" {
 
 variable "subnet_address_prefix" {
   type        = list(string)
-  description = "[REQUIRED] - name given to subnet"
+  description = "[REQUIRED] - address prefix given to subnet"
 }
 
 variable "service_endpoints" {
@@ -52,12 +52,12 @@ variable "peering_client_id" {
 
 variable "peering_client_secret" {
   type        = string
-  description = "[REQUIRED] - client id with peering access"
+  description = "[REQUIRED] - client secret with peering access"
 }
 
 variable "dns_zones" {
   type        = list(string)
-  description = "list of private dns zones to link to virtual network"
+  description = "list of private dns zone names to link to virtual network"
   default     = []
 }
 

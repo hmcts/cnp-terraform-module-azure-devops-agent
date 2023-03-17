@@ -53,3 +53,8 @@ variable "dns_zones" {
   type        = list(string)
   description = "list of dns zones to link to virtual network"
 }
+
+variable "key_vault_name" {
+  type        = string
+  description = "name given to key vault"
+}

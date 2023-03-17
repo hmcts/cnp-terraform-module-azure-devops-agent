@@ -8,7 +8,7 @@ data "azurerm_shared_image" "devops-ubuntu" {
   name                = "devops-ubuntu"
   gallery_name        = "hmcts"
   resource_group_name = "hmcts-image-gallery-rg"
-  provider            = azurerm.mgmt
+  provider            = azurerm.image_gallery
 }
 
 resource "azurerm_linux_virtual_machine_scale_set" "vh_ado_agent_vmss" {

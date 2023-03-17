@@ -48,3 +48,8 @@ variable "peering_client_secret" {
   type        = string
   description = "client id with peering access"
 }
+
+variable "dns_zones" {
+  type        = list(string)
+  description = "list of dns zones to link to virtual network"
+}

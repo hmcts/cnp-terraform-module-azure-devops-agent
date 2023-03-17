@@ -8,10 +8,13 @@ resource "azurerm_virtual_network" "vnet" {
 }
 
 resource "azurerm_subnet" "subnet" {
-  name                                           = var.subnet_name
-  address_prefixes                               = var.subnet_address_prefix
-  resource_group_name                            = var.resource_group_name
-  virtual_network_name                           = azurerm_virtual_network.vnet.name
-  enforce_private_link_endpoint_network_policies = true
-  enforce_private_link_service_network_policies  = true
+  name                 = var.subnet_name
+  address_prefixes     = var.subnet_address_prefix
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = azurerm_virtual_network.vnet.name
+
+  service_endpoints = var.service_endpoints
+
+  private_endpoint_network_policies_enabled     = true
+  private_link_service_network_policies_enabled = true
 }

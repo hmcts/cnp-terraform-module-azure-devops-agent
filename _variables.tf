@@ -99,3 +99,8 @@ variable "vmss_source_image_id" {
   description = "the id of an image which the virtual machine scale set should be based on"
   default     = null
 }
+
+variable "nsg_name" {
+  type        = string
+  description = "name given to the nsg"
+}

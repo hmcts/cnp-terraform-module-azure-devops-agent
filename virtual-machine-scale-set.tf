@@ -11,7 +11,7 @@ data "azurerm_shared_image" "devops-ubuntu" {
   provider            = azurerm.image_gallery
 }
 
-resource "azurerm_linux_virtual_machine_scale_set" "vh_ado_agent_vmss" {
+resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   name                = var.vmss_name
   location            = var.location
   resource_group_name = var.resource_group_name

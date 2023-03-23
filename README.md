@@ -18,6 +18,8 @@ This module was created to simplify the deployment of an Azure DevOps Self Hoste
 - Azure Key Vault
 - Virtual Machine Scale Set
 
+## Passing Providers
+To use this module, you MUST pass the providers stated below via the parent module, this module uses multiple providers to setup peerings and dns links, information on how to do pass the providers via the parent module can be found in [examples](examples) or https://developer.hashicorp.com/terraform/language/modules/develop/providers#providers-within-modules.
 
 ## Contributing
 For any improvements or to add new features, please open a [Pull Request](https://github.com/hmcts/terraform-module-azure-devops-agent/compare) which will be reviewed by a member of the team.
@@ -43,7 +45,6 @@ An example on how to use this module can be found [here](examples).
 | <a name="provider_azurerm.nonprod_peering"></a> [azurerm.nonprod\_peering](#provider\_azurerm.nonprod\_peering) | >= 3.40.0 |
 | <a name="provider_azurerm.prod_peering"></a> [azurerm.prod\_peering](#provider\_azurerm.prod\_peering) | >= 3.40.0 |
 | <a name="provider_azurerm.sbox_peering"></a> [azurerm.sbox\_peering](#provider\_azurerm.sbox\_peering) | >= 3.40.0 |
-| <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
 
 ## Modules
 

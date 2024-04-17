@@ -4,21 +4,9 @@ data "azurerm_virtual_network" "hmcts-hub-prod-int" {
   provider            = azurerm.prod_peering
 }
 
-data "azurerm_virtual_network" "ukw-hub-prod-int" {
-  name                = "ukw-hub-prod-int"
-  resource_group_name = "ukw-hub-prod-int"
-  provider            = azurerm.prod_peering
-}
-
 data "azurerm_virtual_network" "hmcts-hub-nonprodi" {
   name                = "hmcts-hub-nonprodi"
   resource_group_name = "hmcts-hub-nonprodi"
-  provider            = azurerm.nonprod_peering
-}
-
-data "azurerm_virtual_network" "ukw-hub-nonprodi" {
-  name                = "ukw-hub-nonprodi"
-  resource_group_name = "ukw-hub-nonprodi"
   provider            = azurerm.nonprod_peering
 }
 

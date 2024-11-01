@@ -104,3 +104,9 @@ variable "nsg_name" {
   type        = string
   description = "name given to the nsg"
 }
+
+variable "enable_private_endpoint_network_policies" {
+  type        = string
+  description = "network policies for private endpoint"
+  default     = "Enabled"
+}

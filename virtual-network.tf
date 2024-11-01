@@ -15,6 +15,6 @@ resource "azurerm_subnet" "subnet" {
 
   service_endpoints = var.service_endpoints
 
-  private_endpoint_network_policies_enabled     = true
+  private_endpoint_network_policies             = var.enable_private_endpoint_network_policies
   private_link_service_network_policies_enabled = true
 }
